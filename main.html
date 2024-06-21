@@ -45,12 +45,71 @@
             margin: 8px;
             width: 20px;
         }
+
+        #functionBar>div {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #generateFunction>div {
+            margin: 10px;
+        }
+
+        #answerFunction>div {
+            position: relative;
+            width: 100px;
+            height: 50px;
+        }
+
+        #answerFunction button {
+            position: absolute;
+            width: 100px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        #hideAnswer {
+            background-color: red;
+            display: none;
+        }
+
+        #showAnswer {
+            background-color: greenyellow;
+        }
+
+        .hide {
+            opacity: 0;
+        }
     </style>
 </head>
 
 <body>
     <div id="syllableNames"></div>
-    <div id="functionBar"></div>
+    <div id="functionBar">
+        <div id="generateFunction">
+            <div id="colNum">
+                <span>列数：</span>
+                <input type="text">
+            </div>
+            <div id="lineNum">
+                <span>行数：</span>
+                <input type="text">
+            </div>
+            <div>
+                <button id="regenerate">重新生成</button>
+            </div>
+        </div>
+        <div id="answerFunction">
+            <div>
+                <button id="hideAnswer" type="button">隐藏答案</button>
+                <button id="showAnswer" type="button">显示答案</button>
+            </div>
+        </div>
+    </div>
     <script src="./main.js"></script>
 </body>
 
